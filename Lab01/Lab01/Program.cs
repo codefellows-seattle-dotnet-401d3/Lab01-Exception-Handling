@@ -55,7 +55,7 @@ namespace Lab01
         {
             try
             {
-                Console.WriteLine("Do I drive or Bus to COde Fellows?");
+                Console.WriteLine("Do I drive or Bus to Code Fellows?");
                 Console.WriteLine("a) Yes\nb) No");
                 string userInput = Console.ReadLine();
                 if (userInput == "a")
