@@ -79,6 +79,19 @@ namespace solution
                     "Brent loves chess. What is the name of the current (March 2018) world chess champion? (first and last name)",
                     "Magnus Carlsen",
                     "Magnus Carlsen got the title in 2013 in a match against Viswanathan Anand."
+                },
+                new string[]
+                {
+                    "Brent loves reading. Can you guess the book that got Brent into programming in the first place?",
+                    "Algorithms to Live By",
+                    "Algorithms to Live By: The Computer Science of Human Decisions by Brian Christian\n" +
+                    "This book takes the ideas and concepts of computer science and applies them to everyday life. No actual code is contained within."
+                },
+                new string[]
+                {
+                    "There is one thing Brent really enjoys baking. What is it?",
+                    "Bread",
+                    "Brent has always loved Bread. A few years ago he picked it up as a hobby. A wonderfully delicious hobby."
                 }
             };
         }
