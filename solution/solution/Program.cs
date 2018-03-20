@@ -99,6 +99,12 @@ namespace solution
                     "There is one thing Brent really enjoys baking. What is it?",
                     "Bread",
                     "Brent has always loved Bread. A few years ago he picked it up as a hobby. A wonderfully delicious hobby."
+                },
+                new string[]
+                {
+                    "Is Brent a dog person?",
+                    "Y",
+                    "Brent loves dogs. Cats are ok, but dogs are awesome!"
                 }
             };
         }
