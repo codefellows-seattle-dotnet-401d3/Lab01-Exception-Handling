@@ -4,37 +4,58 @@ namespace ConsoleApp1
 {
     class Program
     {
-      
+
         static void Main(string[] args)
         {
-            Console.WriteLine("Greetin take this quiz!");
-            QuestionOne();
 
-        }
-
-        static void QuestionOne()
-        {
-            int UserAge, UserNum;
-            string Username, UserColor, UserAnimal;
-
-            Console.WriteLine("How old are you ?");
-           UserAge = Convert.ToByte(Console.ReadLine());
-
-            Console.WriteLine("What is your name:?");
-            Username = Convert.ToString(Console.ReadLine());
-
-            Console.WriteLine("What is your favorite Color?");
-            UserColor = Convert.ToString(Console.ReadLine());
-
-            Console.WriteLine(" pick a number 1 or 2");
-            UserNum = Convert.ToByte(Console.ReadLine());
-
-            Console.WriteLine("Do you like Dogs or Cats?");
-            UserAnimal = Convert.ToString(Console.ReadLine());
-
-         
-        }
-
+            Console.WriteLine("Greetin take this quiz! about me");
+          
        
+            if (Username() == "tiger") {
+                Console.WriteLine("correct");
+            }
+
+            if (petAnswer() == "yes")
+            {
+                Console.WriteLine("yes I have a dog");
+            }
+
+        }
+
+        // each its own method, asking the user their name
+        static string Username()
+        {
+            Console.WriteLine("What is your name?");
+            return Console.ReadLine();
+        }
+
+        //asking user if I have a pet?
+        static string petAnswer()
+        {
+            Console.WriteLine("Do you think I have a dog or cat? yes or no");
+            return Console.ReadLine();
+        }
+
+        //asking favorite color
+        static string favColor()
+        {
+            Console.WriteLine("What is my favorite color?");
+            return Console.ReadLine();
+        }
+        // asking number of fingers
+        static int userAge()
+        {
+            Console.WriteLine("Guess how many fingers I have?");
+            return Convert.ToByte(Console.ReadLine());
+        }
+
+        //type of car 
+        static string typeOfCar()
+        {
+            Console.WriteLine("what type of car do I have?");
+            return Console.ReadLine(); 
+        }
+
+
     }
 }
