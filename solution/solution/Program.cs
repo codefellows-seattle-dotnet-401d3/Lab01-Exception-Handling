@@ -10,10 +10,18 @@ namespace solution
     {
         static void Main(string[] args)
         {
+            try
+            {
             string[][] questions = Questions();
             int correctAnswers = AskAll(questions);
             Console.WriteLine("You got {0} right out of {1}", correctAnswers, questions.Length);
             Console.ReadLine();
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("an error has occured.");
+                Console.WriteLine(e.Message);
+            }
         }
 
         static bool Correct(string answer, string correct)
@@ -30,7 +38,6 @@ namespace solution
             int correct = 0;
             foreach (string[] question in questions)
             {
-
                 if (Correct(Ask(question), question[1]))
                     correct++;
             }
