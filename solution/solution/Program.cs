@@ -15,7 +15,7 @@ namespace solution
             string[][] questions = Questions();
             int correctAnswers = AskAll(questions);
             Console.WriteLine("You got {0} right out of {1}", correctAnswers, questions.Length);
-            Console.ReadLine();
+            Pause();
             }
             catch (Exception e)
             {
@@ -39,14 +39,30 @@ namespace solution
             foreach (string[] question in questions)
             {
                 if (Correct(Ask(question), question[1]))
+                {
                     correct++;
+                    Console.WriteLine("Correct!");
+                }
+                else
+                {
+                    Console.WriteLine("Sorry, that is incorrect.");
+                }
+                Console.WriteLine(question[2]);
+                Pause();
             }
             return correct;
+        }
+
+        static void Pause()
+        {
+            Console.WriteLine("Press any key to proceed");
+            Console.ReadKey();
         }
 
         static string Ask(string[] question)
         {
             string userAnswer;
+            Console.Clear();
             try
             {
                 Console.WriteLine(question[0]);
@@ -58,10 +74,6 @@ namespace solution
             {
                 Console.WriteLine("Invald input. Try again.");
                 userAnswer = Ask(question);
-            }
-            finally
-            {
-                Console.WriteLine(question[2]);
             }
             return userAnswer;
         }
