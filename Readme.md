@@ -1,45 +1,32 @@
-![cf](http://i.imgur.com/7v5ASc8.png) Lab 1 : About Me Quiz
+# Lab 1 : About Me Quiz (Brent)
 =====================================
 
-## To Submit this Assignment
+## Summary
 
-- fork this repository
-- create a new branch named `lab01-`; + `<your name>` **e.g.** `lab01-amanda`
-- write your code
-- push to your repository
-- submit a pull request to this repository
-- submit a link to your PR in canvas
-- Include a Readme.md (contents described below)
+A simple guessing game. The console will ask the user a series of questions about Brent and check for correctness.
 
-## Directions
+## Use
 
-- Create an "About Me" quiz in a console application with VS2017
-- Your solution should include the following:
-    - Main method
-	- external methods- (at least 3 non-void return types)
-	- 5 different questions
-	- Exception Handling (try/catch/finally)
-	- Are you able to incorprate a `throw` somehow? 
+You will need to pass the solution.cs file through a c# compiler. Once that is done, there should be a console window that immediately begins asking questions. Answers are not case sensitive. For yes/no questions: yes = y = true and no = n = false.
 
-### Stretch
+If you get through the game and are told "you got x right out of y" then you have successfully run the app to completion.
 
-- Track number of correct/incorrect questions 
-      - Show the user the number of correct/incorrect to user after quiz is over
+## Altering questions
 
-## ReadMe
+Currently, questions are in a specific formar inside the Questions() methode. Each string should look like this:
+```
+new string[]
+{
+    "Question text goes here",
+    "Correct answer goes here", // if it is a yes or no question, put "y" or "n"
+    "Message about the answer/question to display after the question has been answered"
+},
+```
 
-Provide setup documentation 
+## Sources
 
-- **Comment your code.**
-- Provide a readme that includes clear directions on setting up this program.
-- Questions to Consider: 
-	1. What programs do I need installed?
-	1. What are the step by step directions?
-	1. How do I run the program?
-	1. How do I know the program worked successfully?
+When trying to make an array of arrays, stack overflow directed me to https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/arrays/jagged-arrays
 
-## Rubric
+Wikipedia confirmed the exact year of Magnus Carlsen's ascent
 
-- 7pts: Program meets all requirements described in Lab directions
-- 3pts: Code meets industry standards
-- **Readme.md required for submission. Missing readme document will result in a best score of 2/10**
+The full title and author names of Algorithms to Live By was taken from Amazon
