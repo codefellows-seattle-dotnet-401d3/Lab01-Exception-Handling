@@ -1,17 +1,3 @@
-# About me Quiz
-
-
-
-## Getting Started
-
-These instructions will get you a copy of the project up and running on your local machine for development 
-and testing purposes. See deployment for notes on how to deploy the project on a live system.
-
-### Prerequisites
-
-MicroSoft Visual Studio 2017
-
-### Installing
 
 
 # About me Quiz
@@ -35,9 +21,8 @@ This is an application with 5 questions about me using external methods, main me
 
 ## Example
 
-![alt text](http://url/to/img.png)
+![alt text](https://github.com/Playingtygre/Lab01-Exception-Handling/blob/lab01-tiger/ConsoleApp1/aboutmeQuiz.JPG)
 
-<!-- Show them what looks like and how how to use the application.  -->
 
 ## Architecture
 C# Console
