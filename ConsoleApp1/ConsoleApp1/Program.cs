@@ -10,23 +10,68 @@ namespace ConsoleApp1
 
             Console.WriteLine("Greetin take this quiz! about me");
           
-       
-            if (Username() == "tiger") {
-                Console.WriteLine("correct");
+            //Username()
+            if (Username() == " ") {
+                Console.WriteLine("Hello");
             }
-
-            if (petAnswer() == "yes")
+            //petAnswer
+            if (petAnswer() == "yes");
             {
                 Console.WriteLine("yes I have a dog");
             }
+            //favColor
+            if (favColor() == "blue")
+            {
+                Console.WriteLine("yes that is correct");
+            }
+            else
+            {
+                Console.WriteLine("its blue");
+            }
 
+            // user age
+            if (userAge() == 30)
+            {
+                Console.WriteLine("yes that is correct");
+            }
+
+            //input car
+            if (typeOfCar() == "toyota")
+            {
+                Console.WriteLine("yes that is correct");
+            }
+            else
+            {
+                Console.WriteLine("Nope it is Japanese Car tho!");
+            }
         }
+
+
+        // draft
+        static void catchException()
+        {
+            int number;
+            try
+            {
+                Console.WriteLine("enter a number!");
+                number = Convert.ToByte(Console.ReadLine());
+
+            }
+            catch (Exception e)
+            {
+
+            }
+ 
+        }
+
+
 
         // each its own method, asking the user their name
         static string Username()
         {
             Console.WriteLine("What is your name?");
             return Console.ReadLine();
+
         }
 
         //asking user if I have a pet?
