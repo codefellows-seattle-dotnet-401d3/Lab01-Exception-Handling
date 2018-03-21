@@ -24,6 +24,12 @@ namespace solution
             }
         }
 
+        /// <summary>
+        /// checks if an answer matches the correct answer without regard to capitalization. Coerces acceptible yes's and no's
+        /// </summary>
+        /// <param name="answer">user provided</param>
+        /// <param name="correct">correct answer</param>
+        /// <returns>bool</returns>
         static bool Correct(string answer, string correct)
         {
             answer = answer.ToUpper();
@@ -33,14 +39,19 @@ namespace solution
             return answer == correct;
         }
 
+        /// <summary>
+        /// Asks all the questions in a jagged array. requires the questions to be formatted per Questions method.
+        /// </summary>
+        /// <param name="questions">Jagged array of questions</param>
+        /// <returns>total number of correct answers</returns>
         static int AskAll(string[][] questions)
         {
-            int correct = 0;
+            int numCorrect = 0;
             foreach (string[] question in questions)
             {
                 if (Correct(Ask(question), question[1]))
                 {
-                    correct++;
+                    numCorrect++;
                     Console.WriteLine("Correct!");
                 }
                 else
@@ -49,8 +60,8 @@ namespace solution
                 }
                 Console.WriteLine(question[2]);
                 Pause();
-            }
-            return correct;
+            } 
+            return numCorrect;
         }
 
         static void Pause()
@@ -59,6 +70,11 @@ namespace solution
             Console.ReadKey();
         }
 
+        /// <summary>
+        /// asks a given question. Assumes question has the format from Questions method.
+        /// </summary>
+        /// <param name="question">question array formatted as per Questions method</param>
+        /// <returns></returns>
         static string Ask(string[] question)
         {
             string userAnswer;
@@ -78,9 +94,15 @@ namespace solution
             return userAnswer;
         }
 
+        /// <summary>
+        /// Hard codes a jagged array of questions with associated information
+        /// for each question[0] is question, [1] correct answer [2] message
+        /// </summary>
+        /// Things that depend on this question format: Ask(), AskAll()
+        /// <returns>array of questions as arrays.</returns>
         static string[][] Questions ()
         {
-            //format of array: [0] question [1] correct answer as a string [2] message explaining the answer
+            //format of question: [0] question [1] correct answer as a string [2] message explaining the answer
             return new string[][]
             {
                 new string[] {
