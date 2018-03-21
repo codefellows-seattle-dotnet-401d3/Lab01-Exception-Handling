@@ -10,16 +10,16 @@ namespace ConsoleApp1
 
             Console.WriteLine("Greetin take this quiz! about me");
           
-            //Username()
+          
             if (Username() == " ") {
                 Console.WriteLine("Hello");
             }
-            //petAnswer
+          
             if (petAnswer() == "yes");
             {
                 Console.WriteLine("yes I have a dog");
             }
-            //favColor
+        
             if (favColor() == "blue")
             {
                 Console.WriteLine("yes that is correct");
@@ -29,13 +29,13 @@ namespace ConsoleApp1
                 Console.WriteLine("its blue");
             }
 
-            // user age
+            
             if (userAge() == 30)
             {
                 Console.WriteLine("yes that is correct");
             }
 
-            //input car
+          
             if (typeOfCar() == "toyota")
             {
                 Console.WriteLine("yes that is correct");
@@ -47,7 +47,7 @@ namespace ConsoleApp1
         }
 
 
-        // draft
+ 
         static void catchException()
         {
             int number;
@@ -63,7 +63,6 @@ namespace ConsoleApp1
             }
  
         }
-
 
 
         // each its own method, asking the user their name
