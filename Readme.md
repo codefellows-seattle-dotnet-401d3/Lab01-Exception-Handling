@@ -1,45 +1,26 @@
-![cf](http://i.imgur.com/7v5ASc8.png) Lab 1 : About Me Quiz
-=====================================
+# About Me Quiz
 
-## To Submit this Assignment
+**Author**: Arthur Allen
+**Version**: 1.0.0
 
-- fork this repository
-- create a new branch named `lab01-`; + `<your name>` **e.g.** `lab01-amanda`
-- write your code
-- push to your repository
-- submit a pull request to this repository
-- submit a link to your PR in canvas
-- Include a Readme.md (contents described below)
+## Overview
+<!-- Provide a high level overview of what this application is and why you are building it, beyond the fact that it's an assignment for a Code Fellows 401 class. (i.e. What's your problem domain?) -->
+A multiple choice quiz, used for demonstrating non-void return methods and catch/throw exception handling.
 
-## Directions
+## Getting Started
+<!-- What are the steps that a user must take in order to build this app on their own machine and get it running? -->
+Use Visual Studio 2017.
 
-- Create an "About Me" quiz in a console application with VS2017
-- Your solution should include the following:
-    - Main method
-	- external methods- (at least 3 non-void return types)
-	- 5 different questions
-	- Exception Handling (try/catch/finally)
-	- Are you able to incorprate a `throw` somehow? 
+## Example
+<!-- Show them what it looks like and how to use the application.  -->
+The user starts with zero points.  You get a multiple choice question, and every correct answer gives you one point.  Every wrong answer takes away a point.
 
-### Stretch
+## Architecture
+<!-- Provide a detailed description of the application design. What technologies (languages, libraries, etc) you're using, and any other relevant design information. -->
+Written in C#
 
-- Track number of correct/incorrect questions 
-      - Show the user the number of correct/incorrect to user after quiz is over
+## Change Log
+<!-- Use this are to document the iterative changes made to your application as each feature is successfully implemented. Use time stamps. Here's an example:
 
-## ReadMe
-
-Provide setup documentation 
-
-- **Comment your code.**
-- Provide a readme that includes clear directions on setting up this program.
-- Questions to Consider: 
-	1. What programs do I need installed?
-	1. What are the step by step directions?
-	1. How do I run the program?
-	1. How do I know the program worked successfully?
-
-## Rubric
-
-- 7pts: Program meets all requirements described in Lab directions
-- 3pts: Code meets industry standards
-- **Readme.md required for submission. Missing readme document will result in a best score of 2/10**
+01-01-2001 4:59pm - Added functionality to add and delete some things. -->
+3-20-2018 5:30pm - Main build
