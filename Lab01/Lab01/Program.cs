@@ -44,10 +44,10 @@ namespace Lab01
                     return 0;
                 }
             }
-            catch (FormatException ex)
+            catch (FormatException )
             {
                 Console.WriteLine("Pleaes enter a b c or d");
-                return 0;
+                throw;
             }
         }
 
@@ -71,7 +71,7 @@ namespace Lab01
                     return false;
                 }
             }
-            catch (FormatException ex)
+            catch (FormatException)
             {
                 Console.WriteLine("Pleaes enter a or b");
                 return false;
@@ -97,10 +97,10 @@ namespace Lab01
                     return "nope";
                 }
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 Console.WriteLine("Somthing went wrong. I don't know what you did.");
-                return "exception";
+                throw;
             }
         }
 
@@ -124,10 +124,10 @@ namespace Lab01
                     return 0;
                 }
             }
-            catch (FormatException ex)
+            catch (FormatException)
             {
                 Console.WriteLine("Pleaes enter a b c or d");
-                return 0;
+                throw;
             }
         }
 
@@ -151,10 +151,10 @@ namespace Lab01
                     return 0;
                 }
             }
-            catch (FormatException ex)
+            catch (FormatException)
             {
                 Console.WriteLine("Pleaes enter a b c or d");
-                return 0;
+                throw;
             }
         }
     }
