@@ -17,7 +17,9 @@ namespace ConsoleApp1
             favColor();
             favNumber();
             typeCar();
+            NumberOfFeet();
             Console.ReadKey();
+            Console.WriteLine("bye.........bye" );
         }
 
         // each its own method, asking the user their name
@@ -82,7 +84,7 @@ namespace ConsoleApp1
             }
         }
 
-
+        //asking what my favorite number is
         static void favNumber()
         {
             try
@@ -132,5 +134,35 @@ namespace ConsoleApp1
             }
         }
 
+
+        static void NumberOfFeet()
+        {
+            try
+            {
+                Console.WriteLine("How many feet do I have?");
+                var HaveNumber = (Console.ReadLine().ToUpper());
+                if (HaveNumber == "2")
+                {
+                    Console.WriteLine("That is correct I have only 2 feet");
+                }
+                else
+                {
+                    Console.WriteLine(" You think I really have more than a left and right foot?");
+                }
+            }
+
+            catch (FormatException)
+            {
+                Console.WriteLine("Please answer with either 1 or 2");
+                throw;
+            }
+
+            
+
+
+        }
+      
+
+        //Bottom of the Main class
     }
 }
