@@ -11,12 +11,11 @@ namespace ConsoleApp1
             Console.WriteLine("Greetin take this quiz! about me");
 
             Username();
-          
-            if (petAnswer() == "yes");
-            {
-                Console.WriteLine("yes I have a dog");
-            }
-        
+            Console.Clear();
+            petAnswer();
+
+
+
             if (favColor() == "blue")
             {
                 Console.WriteLine("yes that is correct");
@@ -48,24 +47,6 @@ namespace ConsoleApp1
 
 
 
-        /* static void catchException()
-         {
-             int number;
-             try
-             {
-                 Console.WriteLine("enter a number!");
-                 number = Convert.ToByte(Console.ReadLine());
-
-             }
-             catch (Exception e)
-             {
-
-             }
-
-         }
-         */
-
-
         // each its own method, asking the user their name
         static void Username()
         {
@@ -80,13 +61,35 @@ namespace ConsoleApp1
 
 
 
-
+        
+            
 
         //asking user if I have a pet?
-        static string petAnswer()
+        static void petAnswer()
         {
-            Console.WriteLine("Do you think I have a dog or cat? yes or no");
-            return Console.ReadLine();
+            try
+            {
+                Console.WriteLine("Do you think I have a dog or cat? yes or no");
+                var HavePet = (Console.ReadLine().ToUpper());
+                Console.WriteLine(HavePet);
+                if (HavePet == "YES")
+                {
+                    Console.WriteLine("thats Correct");
+                }
+                else
+                {
+                    Console.WriteLine("Nope I did have a dog");
+                }
+            }
+
+            catch (FormatException)
+            {
+                Console.WriteLine("Please answer yes or no");
+                throw;
+            }
+            
+
+            
         }
 
         //asking favorite color
