@@ -9,11 +9,8 @@ namespace ConsoleApp1
         {
 
             Console.WriteLine("Greetin take this quiz! about me");
-          
-          
-            if (Username() == " ") {
-                Console.WriteLine("Hello");
-            }
+
+            Username();
           
             if (petAnswer() == "yes");
             {
@@ -43,35 +40,47 @@ namespace ConsoleApp1
             else
             {
                 Console.WriteLine("Nope it is Japanese Car tho!");
+
             }
+
+          
         }
 
 
- 
-        static void catchException()
-        {
-            int number;
-            try
-            {
-                Console.WriteLine("enter a number!");
-                number = Convert.ToByte(Console.ReadLine());
 
-            }
-            catch (Exception e)
-            {
+        /* static void catchException()
+         {
+             int number;
+             try
+             {
+                 Console.WriteLine("enter a number!");
+                 number = Convert.ToByte(Console.ReadLine());
 
-            }
- 
-        }
+             }
+             catch (Exception e)
+             {
+
+             }
+
+         }
+         */
 
 
         // each its own method, asking the user their name
-        static string Username()
+        static void Username()
         {
-            Console.WriteLine("What is your name?");
-            return Console.ReadLine();
+                Console.WriteLine("What is your name?");
+                String Name = Console.ReadLine();
+                Console.WriteLine("Hello" +" " + Name);
+                Console.ReadKey();
 
         }
+
+
+
+
+
+
 
         //asking user if I have a pet?
         static string petAnswer()
