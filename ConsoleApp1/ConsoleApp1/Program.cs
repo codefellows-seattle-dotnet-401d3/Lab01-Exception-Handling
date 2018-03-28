@@ -11,41 +11,14 @@ namespace ConsoleApp1
             Console.WriteLine("Greetin take this quiz! about me");
 
             Username();
+            Console.WriteLine("HIT ENTER");
             Console.Clear();
             petAnswer();
-
-
-
-            if (favColor() == "blue")
-            {
-                Console.WriteLine("yes that is correct");
-            }
-            else
-            {
-                Console.WriteLine("its blue");
-            }
-
-            
-            if (userAge() == 30)
-            {
-                Console.WriteLine("yes that is correct");
-            }
-
-          
-            if (typeOfCar() == "toyota")
-            {
-                Console.WriteLine("yes that is correct");
-            }
-            else
-            {
-                Console.WriteLine("Nope it is Japanese Car tho!");
-
-            }
-
-          
+            favColor();
+            favNumber();
+            typeCar();
+            Console.ReadKey();
         }
-
-
 
         // each its own method, asking the user their name
         static void Username()
@@ -57,12 +30,6 @@ namespace ConsoleApp1
 
         }
 
-
-
-
-
-        
-            
 
         //asking user if I have a pet?
         static void petAnswer()
@@ -87,31 +54,83 @@ namespace ConsoleApp1
                 Console.WriteLine("Please answer yes or no");
                 throw;
             }
-            
-
-            
         }
 
-        //asking favorite color
-        static string favColor()
+
+        //asking favorite Color
+        static void favColor()
         {
-            Console.WriteLine("What is my favorite color?");
-            return Console.ReadLine();
-        }
-        // asking number of fingers
-        static int userAge()
-        {
-            Console.WriteLine("Guess how many fingers I have?");
-            return Convert.ToByte(Console.ReadLine());
+            try
+            {
+                Console.WriteLine("What is my favorite Color?");
+                Console.WriteLine(" pick one red blue yellow green");
+                var HaveColor = (Console.ReadLine().ToUpper());
+                if (HaveColor == "Blue")
+                {
+                    Console.WriteLine("thats Correct Blue is my Favorite Color");
+                }
+                else
+                {
+                    Console.WriteLine("Nope I dont like that Color");
+                }
+            }
+
+            catch (FormatException)
+            {
+                Console.WriteLine("Please answer with a color");
+                throw;
+            }
         }
 
-        //type of car 
-        static string typeOfCar()
+
+        static void favNumber()
         {
-            Console.WriteLine("what type of car do I have?");
-            return Console.ReadLine(); 
+            try
+            {
+                Console.WriteLine("What is my favorite number?");
+                Console.WriteLine(" 1 2 3 4 5 6 7 8 9 10");
+                var HaveNumber = (Console.ReadLine().ToUpper());
+                if (HaveNumber == "5")
+                {
+                    Console.WriteLine(" FIve is my favorite number");
+                }
+                else
+                {
+                    Console.WriteLine("Not the correct number");
+                }
+            }
+
+            catch (FormatException)
+            {
+                Console.WriteLine("Please answer with a number");
+                throw;
+            }
         }
 
+
+        static void typeCar()
+        {
+            try
+            {
+                Console.WriteLine("What type of car do I have?");
+                Console.WriteLine("pick a brand");
+                var HaveNumber = (Console.ReadLine().ToUpper());
+                if (HaveNumber == "Toyota")
+                {
+                    Console.WriteLine(" YESS that is type of car I drive");
+                }
+                else
+                {
+                    Console.WriteLine("Not the correct brand");
+                }
+            }
+
+            catch (FormatException)
+            {
+                Console.WriteLine("Please type somthing in");
+                throw;
+            }
+        }
 
     }
 }
