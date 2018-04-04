@@ -65,7 +65,7 @@ namespace ConsoleApp1
             try
             {
                 Console.WriteLine("What is my favorite Color?");
-                Console.WriteLine(" pick one red blue yellow green");
+                Console.WriteLine(" pick one red blue yellow green"); ;
                 var HaveColor = (Console.ReadLine().ToUpper());
                 if (HaveColor == "Blue")
                 {
